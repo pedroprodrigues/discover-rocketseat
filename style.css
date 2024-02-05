@@ -45,7 +45,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*height: 712px; não precisa deixar altura fixa, ideal é que vá preenchendo conforme adiciona conteúdo */
   /*border: 1px solid red;*/
   margin: 56px auto 0px; /*margin funciona para os 4 lados, seguindo o sentido horário (se em os 4 elementos) ou segue top/down - laterais, ou top - laterais - down, como é aqui */
