@@ -13,7 +13,7 @@
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg: url(./Assets/MoonStars.svg)
+  --switch-bg: url(./Assets/MoonStars.svg);
 }
 
 .light {
@@ -23,7 +23,7 @@
   --surface-color: rgba(0, 0, 0, 0.1);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg: url(./Assets/Sun.svg)
+  --switch-bg: url(./Assets/Sun.svg);
 }
 
 body {
@@ -37,6 +37,7 @@ body {
   /*Dá para agrupar essas propriedades em uma só
   background: color image repeat position/siza */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh; /* viewport heigth, para completar toda a viewport com o fundo, não só com o conteúdo */
 }
 
 body * {
@@ -98,7 +99,7 @@ body * {
 
 .light #switch button {
   left: initial;
-  right: 0
+  right: 0;
 }
 
 #switch span {
@@ -180,4 +181,15 @@ footer {
 footer a {
   text-decoration: none;
   font-weight: bold;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./Assets/bg-desktop-light.jpg);
+  }
 }
