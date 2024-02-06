@@ -95,11 +95,17 @@ body * {
   /* macete para alinhar elementos absolutos */
   top: 50%;
   transform: translateY(-50%);
+
+  animation: slide-out 0.2s;
 }
 
 .light #switch button {
-  left: initial;
-  right: 0;
+  animation: slide-in 0.2s forwards;
+  /* animação criada no @keyframes */
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -191,5 +197,24 @@ footer a {
 
   .light {
     --bg-url: url(./Assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation do botão */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
