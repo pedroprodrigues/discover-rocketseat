@@ -17,12 +17,12 @@ function toggleMode() {
 
   //se tiver light mode, adicionar imagem light
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./Assets/avatar-light.png")
+    img.setAttribute("src", "./Assets/Perfil fundo rosa.png")
   }
 
   //se não, manter a imagem padrão
   else {
-    img.setAttribute("src", "./Assets/DSC01674 (2).jpg")
+    img.setAttribute("src", "./Assets/Perfil redondo.png")
   }
 
   // Mudar texto alt
